@@ -1,10 +1,18 @@
-#Dataset: NCC-NorESM1-M_r1i1p1_SMHI-RCA4_v3
-#Variable: meanpr
-#Area: land
-#Interpolation_method: cdo remap
-#Spatial_resolution: 0.5º
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-SAM
+#Experiment: historical
+#Model: NCC-NorESM1-M_r1i1p1_SMHI-RCA4_v3
+#Variable: pr
+#Variable_longname: mean daily precipitation
+#Units: mm/day
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: land only
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-03-15
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","SCA","NWS","NSA","NES","SAM","SWS","SES","SSA","full_domain"
 "1970-01",2.967,5.877,3.824,5.994,10.213,3.366,5.375,3.523,5.636
 "1970-02",2.063,7.646,4.263,5.367,9.605,4.339,5.738,3.699,5.878

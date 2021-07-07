@@ -1,10 +1,18 @@
-#Dataset: MPI-M-MPI-ESM-MR_r1i1p1_ORNL-RegCM4-7_v0
-#Variable: meanpr
-#Area: sea
-#Interpolation_method: cdo remap
-#Spatial_resolution: 0.5º
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-WAS
+#Experiment: rcp26
+#Model: MPI-M-MPI-ESM-MR_r1i1p1_ORNL-RegCM4-7_v0
+#Variable: pr
+#Variable_longname: mean daily precipitation
+#Units: mm/day
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: sea only
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-03-14
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","NEAF","SEAF","WCA","ECA","TIB","ARP","SAS","ARS","BOB","EIO","full_domain"
 "2006-01",1.349,3.687,0.114,NA,NA,0.024,0.518,1.682,2.31,12.484,8.282
 "2006-02",0.943,5.06,1.275,NA,NA,0.212,1.18,0.878,7.337,10.092,7.638

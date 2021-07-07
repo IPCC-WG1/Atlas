@@ -1,10 +1,18 @@
-#Dataset: MIROC-MIROC5_r1i1p1_SMHI-RCA4_v2
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-WAS
+#Experiment: rcp45
+#Model: MIROC-MIROC5_r1i1p1_SMHI-RCA4_v2
 #Variable: tas
-#Area: land
-#Interpolation_method: cdo remap
-#Spatial_resolution: 0.5º
+#Variable_longname: mean near-surface air temperature
+#Units: degC
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: land only
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-03-14
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","NEAF","SEAF","WCA","ECA","TIB","ARP","SAS","ARS","BOB","EIO","full_domain"
 "2006-01",22.77,20.903,1.056,-9.885,-18.138,15.335,15.71,24.623,22.805,23.899,9.137
 "2006-02",23.862,21.414,3.398,-6.227,-14.85,18.247,17.94,24.753,23.165,24.445,11.442

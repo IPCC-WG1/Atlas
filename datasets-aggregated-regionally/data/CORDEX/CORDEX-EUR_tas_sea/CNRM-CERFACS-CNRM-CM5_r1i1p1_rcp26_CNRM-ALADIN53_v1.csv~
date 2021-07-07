@@ -1,11 +1,19 @@
-#Dataset: CNRM-CERFACS-CNRM-CM5_r1i1p1_rcp26_CNRM-ALADIN53_v1
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-EUR
+#Experiment: rcp26
+#Model: CNRM-CERFACS-CNRM-CM5_r1i1p1_rcp26_CNRM-ALADIN53_v1
 #Variable: tas
-#Area: sea
-#Interpolation_method: cdo remap
-#Spatial_resolution: 1º
+#Variable_longname: mean near-surface air temperature
+#Units: degC
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: sea only
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-02-24
-"date","NEU","WCE","EEU","MED","world"
-"2006-01",1.006,5.475,NA,12.636,3.935
+"X2006.01","X1.006","X5.475","NA.","X12.636","X3.935"
 "2006-02",-1.375,5.105,NA,12.515,2.52
 "2006-03",-2.445,5.252,NA,13.572,2.673
 "2006-04",1.253,8.973,NA,15.266,4.813

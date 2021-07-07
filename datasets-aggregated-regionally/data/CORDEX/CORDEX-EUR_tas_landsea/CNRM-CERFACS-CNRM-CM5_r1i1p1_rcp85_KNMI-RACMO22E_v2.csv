@@ -1,10 +1,18 @@
-#Dataset: CNRM-CERFACS-CNRM-CM5_r1i1p1_rcp85_KNMI-RACMO22E_v2
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-EUR
+#Experiment: rcp85
+#Model: CNRM-CERFACS-CNRM-CM5_r1i1p1_rcp85_KNMI-RACMO22E_v2
 #Variable: tas
-#Area: landsea
-#Interpolation_method: cdo remap
-#Spatial_resolution: 1º
+#Variable_longname: mean near-surface air temperature
+#Units: degC
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: land and sea
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-03-14
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","NEU","WCE","EEU","MED","world"
 "2006-01",-1.387,-2.092,-15.495,7.852,2.634
 "2006-02",-2.502,-2.553,-9.832,6.701,2.313

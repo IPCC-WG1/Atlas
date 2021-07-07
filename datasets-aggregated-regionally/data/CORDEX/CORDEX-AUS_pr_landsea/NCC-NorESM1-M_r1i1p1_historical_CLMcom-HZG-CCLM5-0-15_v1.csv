@@ -1,10 +1,18 @@
-#Dataset: NCC-NorESM1-M_r1i1p1_CLMcom-HZG-CCLM5-0-15_v1
-#Variable: meanpr
-#Area: landsea
-#Interpolation_method: cdo remap
-#Spatial_resolution: 0.5º
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-AUS
+#Experiment: historical
+#Model: NCC-NorESM1-M_r1i1p1_CLMcom-HZG-CCLM5-0-15_v1
+#Variable: pr
+#Variable_longname: mean daily precipitation
+#Units: mm/day
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: land and sea
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-03-15
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","SEA","NAU","CAU","EAU","SAU","NZ","full_domain"
 "1970-01",7.828,4.103,0.589,1.017,2.014,4.648,7.179
 "1970-02",6.822,3.597,0.284,1.027,1.194,3.38,6.258

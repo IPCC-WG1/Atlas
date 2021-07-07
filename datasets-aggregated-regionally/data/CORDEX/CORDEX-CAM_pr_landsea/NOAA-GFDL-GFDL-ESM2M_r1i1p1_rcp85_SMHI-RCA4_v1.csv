@@ -1,10 +1,18 @@
-#Dataset: NOAA-GFDL-GFDL-ESM2M_r1i1p1_SMHI-RCA4_v1
-#Variable: meanpr
-#Area: landsea
-#Interpolation_method: cdo remap
-#Spatial_resolution: 0.5º
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-CAM
+#Experiment: rcp85
+#Model: NOAA-GFDL-GFDL-ESM2M_r1i1p1_SMHI-RCA4_v1
+#Variable: pr
+#Variable_longname: mean daily precipitation
+#Units: mm/day
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: land and sea
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-03-14
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","NCA","SCA","CAR","NWS","NSA","NES","SAM","full_domain"
 "2006-01",1.603,1.407,1.998,3.465,1.667,5.766,3.336,2.809
 "2006-02",0.966,0.543,1.641,5.237,0.986,8.261,3.71,2.983

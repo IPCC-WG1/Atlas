@@ -1,10 +1,18 @@
-#Dataset: CSIRO-BOM-ACCESS1-3_r1i1p1_UNSW-WRF360K_v1
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-AUS
+#Experiment: historical
+#Model: CSIRO-BOM-ACCESS1-3_r1i1p1_UNSW-WRF360K_v1
 #Variable: tas
-#Area: landsea
-#Interpolation_method: cdo remap
-#Spatial_resolution: 0.5º
+#Variable_longname: mean near-surface air temperature
+#Units: degC
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: land and sea
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-03-15
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","SEA","NAU","CAU","EAU","SAU","NZ","full_domain"
 "1970-01",27.694,28.885,31.157,25.942,19.465,15.21,23.575
 "1970-02",27.578,28.696,30.902,24.17,20.504,15.502,23.764

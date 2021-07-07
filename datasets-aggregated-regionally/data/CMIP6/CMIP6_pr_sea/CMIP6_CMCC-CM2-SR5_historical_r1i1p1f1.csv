@@ -1,10 +1,18 @@
-#Dataset: CMIP6_CMCC-CM2-SR5_historical_r1i1p1f1
-#Variable: meanpr
-#Area: sea
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CMIP6
+#Experiment: historical
+#Model: CMCC-CM2-SR5_r1i1p1f1
+#Variable: pr
+#Variable_longname: mean daily precipitation
+#Units: mm/day
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: sea only
+#Spatial_resolution: 1 degrees
 #Interpolation_method: cdo remapcon
-#Spatial_resolution: 1º
 #Creation_Date: 2021-04-14
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","GIC","NWN","NEN","WNA","CNA","ENA","NCA","SCA","CAR","NWS","NSA","NES","SAM","SWS","SES","SSA","NEU","WCE","EEU","MED","SAH","WAF","CAF","NEAF","SEAF","WSAF","ESAF","MDG","RAR","WSB","ESB","RFE","WCA","ECA","TIB","EAS","ARP","SAS","SEA","NAU","CAU","EAU","SAU","NZ","EAN","WAN","ARO","NPO","EPO","SPO","NAO","EAO","SAO","ARS","BOB","EIO","SIO","SOO","world"
 "1850-01",3.463,2.811,1.452,4.232,1.686,3.801,0.825,1.078,1.93,3.559,1.02,4.218,NA,0.354,3.711,2.32,4.512,1.653,1.081,1.672,0.107,0.747,1.919,0.217,0.721,0.184,3.296,6.479,0.583,NA,NA,2.353,1.39,NA,NA,1.802,0.033,0.338,8.428,8.34,0.723,2.855,1.805,1.829,1.023,1.371,0.756,4.023,5.268,3.601,3.133,2.886,2.002,0.568,0.993,6.87,3.265,2.393,3.393
 "1850-02",2.816,1.947,1.385,7.762,2.414,3.93,0.967,0.632,1.453,2.482,0.916,4.659,NA,0.293,4.398,2.247,3.379,1.153,0.467,1.404,0.056,0.451,2.713,0.088,0.237,0.309,3.469,6.641,0.757,NA,NA,1.784,0.813,NA,NA,1.428,0.023,0.146,6.528,10.43,1.887,6.769,1.593,2.888,1.62,1.349,1.054,3.445,5.61,3.95,2.711,2.86,2.794,0.133,0.297,4.507,3.878,2.431,3.338

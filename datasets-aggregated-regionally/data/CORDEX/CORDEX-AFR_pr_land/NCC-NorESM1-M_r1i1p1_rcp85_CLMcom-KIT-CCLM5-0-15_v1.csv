@@ -1,10 +1,18 @@
-#Dataset: NCC-NorESM1-M_r1i1p1_CLMcom-KIT-CCLM5-0-15_v1
-#Variable: meanpr
-#Area: land
-#Interpolation_method: cdo remap
-#Spatial_resolution: 0.5º
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CORDEX-AFR
+#Experiment: rcp85
+#Model: NCC-NorESM1-M_r1i1p1_CLMcom-KIT-CCLM5-0-15_v1
+#Variable: pr
+#Variable_longname: mean daily precipitation
+#Units: mm/day
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: land only
+#Spatial_resolution: 0.5 degrees
+#Interpolation_method: cdo remapcon
 #Creation_Date: 2021-03-14
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","MED","SAH","WAF","CAF","NEAF","SEAF","WSAF","ESAF","MDG","ARP","full_domain"
 "2006-01",1.316,0.011,0.002,1.692,0.007,2.727,5.761,4.765,3.292,0.011,1.397
 "2006-02",1.241,0.005,0.017,2.814,0.273,5.112,5.091,6.381,8.349,0.258,1.963

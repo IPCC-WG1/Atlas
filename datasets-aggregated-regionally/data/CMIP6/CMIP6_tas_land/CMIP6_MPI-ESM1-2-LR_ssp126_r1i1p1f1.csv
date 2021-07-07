@@ -1,10 +1,18 @@
-#Dataset: CMIP6_MPI-ESM1-2-LR_ssp126_r1i1p1f1
+#Dataset: Monthly information aggregated on IPCC reference regions for CMIP5/6 and CORDEX
+#Reference: https://doi.org/10.5194/essd-12-2959-2020
+#Project: CMIP6
+#Experiment: ssp126
+#Model: MPI-ESM1-2-LR_r1i1p1f1
 #Variable: tas
-#Area: land
+#Variable_longname: mean near-surface air temperature
+#Units: degC
+#Time_frequency: month
+#Feature_type: regional mean time series
+#Regions: IPCC-WGI-reference-regions-v4
+#Area: land only
+#Spatial_resolution: 1 degrees
 #Interpolation_method: cdo remapcon
-#Spatial_resolution: 1º
 #Creation_Date: 2021-04-14
-#Author: IPCC-WGI Atlas Hub (https://github.com/SantanderMetGroup/IPCC-Atlas). Santander Meteorology Group.
 "date","GIC","NWN","NEN","WNA","CNA","ENA","NCA","SCA","CAR","NWS","NSA","NES","SAM","SWS","SES","SSA","NEU","WCE","EEU","MED","SAH","WAF","CAF","NEAF","SEAF","WSAF","ESAF","MDG","RAR","WSB","ESB","RFE","WCA","ECA","TIB","EAS","ARP","SAS","SEA","NAU","CAU","EAU","SAU","NZ","EAN","WAN","ARO","NPO","EPO","SPO","NAO","EAO","SAO","ARS","BOB","EIO","SIO","SOO","world"
 "2015-01",-26.682,-16.615,-24.824,-1.967,-0.406,-4.547,10.78,22.579,24.997,21.543,25.572,23.112,22.933,14.494,25.089,13.425,-4.195,-0.386,-9.04,6.877,14.126,22.884,22.609,24.046,23.937,23.796,22.426,24.094,-25.51,-13.617,-19.526,-23.595,2.28,-9.503,-12.298,0.887,14.406,15.311,23.384,28.593,29.492,27.042,22.853,16.164,-22.222,-10.359,-11.029,4.784,27.53,27.412,9.684,NA,NA,24.129,26.191,26.183,26.105,4.963,3.488
 "2015-02",-25.944,-17.584,-20.494,0.577,0.632,-3.838,13.185,22.395,23.876,21.592,26.73,23.191,22.726,14.774,24.298,13.574,-5.406,-3.343,-12.941,8.081,17.76,26.574,24.965,26.658,23.908,22.251,22.031,23.024,-24.087,-15.205,-20.328,-22.321,0.315,-7.653,-11.494,2.417,17.849,17.391,24.194,26.634,31.95,28.909,28.609,14.366,-25.663,-13.047,-11.294,5.157,27.607,27.847,9.81,NA,NA,22.61,25.694,25.953,26.477,5.442,3.96
