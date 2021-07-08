@@ -46,7 +46,7 @@ source("../datasets-interactive-atlas/hatching-functions/hatching-functions.R")
 # Further details: https://github.com/SantanderMetGroup/climate4R/tree/master/R 
 n.chunks <- 100
 # Index, scenario, season and reference and future period(s) of interest, e.g.:
-AtlasIndex <- "meanpr"  # index (frost days)
+AtlasIndex <- "meanpr"  # index (monthly mean daily precipitation)
 project <- "CMIP6"
 scenario <- "ssp585"  # scenario
 season <- c(12, 1, 2)  # (entire year: season = 1:12; boreal winter (DJF): season = c(12, 1, 2); boreal summer (JJA): season = 6:8, and so on...)
