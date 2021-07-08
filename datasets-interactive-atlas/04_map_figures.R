@@ -109,14 +109,10 @@ aux.fun <- function(grid, members) {
 ## A bit more complex auxiliary wrapper is aux.fun.signal, used for the historical data used for computing the signal.
 #  1. Performs data subsetting along the member dimension to extract the common members defined in the previous step
 #  2. Agregate the data annualy.
-#  3. Computes the climatology of the annualy aggregated data by applying the hist.sigma function. 
 aux.fun.signal <- function(grid, members) {
-  climatology(
-    aggregateGrid(
+   aggregateGrid(
       subsetGrid(grid, members = members), aggr.y = list(FUN = mean, na.rm = TRUE)
-    ), 
-    clim.fun = list(FUN = hist.sigma)
-  )
+    )
 }
 
 
