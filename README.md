@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/190203356.svg)](https://zenodo.org/badge/latestdoi/190203356)
+[![DOI](https://zenodo.org/badge/190203356.svg)](https://zenodo.org/badge/latestdoi/190203356) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SantanderMetGroup/climate4R/devel?urlpath=git-pull%3Frepo=https://github.com/IPCC-WG1/Atlas&urlpath=tree/Atlas&branch=devel)
 
 # The Climate Change Atlas
 

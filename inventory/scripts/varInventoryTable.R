@@ -1,6 +1,6 @@
-#     varInventoryTable.R Bias correction methods
+# varInventoryTable.R
 #
-#     Copyright (C) 2019 Santander Meteorology Group (http://www.meteo.unican.es)
+# Copyright (C) 2019 Santander Meteorology Group (http://www.meteo.unican.es)
 #
 #     This program is free software: you can redistribute it and/or modify
 #     it under the terms of the GNU General Public License as published by
@@ -14,6 +14,11 @@
 # 
 #     You should have received a copy of the GNU General Public License
 #     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#' @title Variable inventory table
+#' @description Retrieves inventory of variables available at the User Data
+#'   Gateway, e.g. for CMIP and CORDEX projects and dumps them in CSV format
+#' @author M. Iturbide
 
 varInventoryTable <- function(datasets, output.file = NULL, plot = FALSE) {
   require(abind)
@@ -64,20 +69,9 @@ varInventoryTable <- function(datasets, output.file = NULL, plot = FALSE) {
   }
 }
 
-# ###########apply function------------
-# 
-# library(loadeR)
-# loginUDG("", "")
-# pattern <- ""
-# destfile <- "" #without extension
-# 
-# pattern <- "CMIP6"
-# destfile <- "AtlasHub-inventory/CMIP6_inventory" #without extension
-# 
-# datasets <- UDG.datasets(pattern)$CMIP6
-# InvTable <- varInventoryTable(datasets, output.file = paste0(destfile, ".csv"))
-# 
-# library(Cairo)
-# CairoPDF(paste0(destfile, ".pdf"), height = 16)
-# InvTable$plot
-# dev.off()
+library(loadeR)
+loginUDG("username","password")
+pattern <- "CMIP6"
+destfile <- "CMIP6_inventory.csv"
+datasets <- UDG.datasets(pattern)$CMIP6
+varInventoryTable(datasets, output.file = destfile)

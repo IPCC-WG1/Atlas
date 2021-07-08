@@ -1,6 +1,6 @@
-#     warmig_periods.R Functions to compute Global Warming Level Periods
+# getGWL.R
 #
-#     Copyright (C) 2019 Santander Meteorology Group (http://www.meteo.unican.es)
+# Copyright (C) 2019 Santander Meteorology Group (http://www.meteo.unican.es)
 #
 #     This program is free software: you can redistribute it and/or modify
 #     it under the terms of the GNU General Public License as published by
@@ -15,16 +15,21 @@
 #     You should have received a copy of the GNU General Public License
 #     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 #' @title Global Warming Level timing calculation
 #' @description Atomic function to compute the timing of a user-defined Global Warming Level.
-#' @param data A named numeric vector of mean global annual temperature projections. Names are years.
-#' @param base.period Integer vector of length two, indicating the star/end year of the pre-industrial baseline period. Default to \code{c(1850, 1900)}
+#' @param data
+#'   A named numeric vector of mean global annual temperature projections.
+#'   Names are years.
+#' @param base.period
+#'   Integer vector of length two, indicating the star/end year of the
+#'   pre-industrial baseline period. Default to \code{c(1850, 1900)}
 #' @param proj.period Same as \code{base.period}, but for the projected period.
 #' @param window Integer. Moving window width (in years). Default to 20.
 #' @param GWL Floating point number indicating the global warming level (degrees)
-#' @return The central year of the interval for which the specified GWL is reached. NA if the GWL is not reached within the projected period.
-#' In addition, an attribute (\code{"interval"}) provides the closed interval boundaries.
+#' @return The central year of the interval for which the specified GWL is
+#'   reached. NA if the GWL is not reached within the projected period.  In
+#'   addition, an attribute (\code{"interval"}) provides the closed interval
+#'   boundaries.
 #' @importFrom stats filter
 #' @references Nikulin, G. et al., 2018. The effects of 1.5 and 2 degrees of global warming on Africa in the CORDEX ensemble. Environ. Res. Lett. 13, 065003. https://doi.org/10.1088/1748-9326/aab1b1
 #' @author J. Bedia
