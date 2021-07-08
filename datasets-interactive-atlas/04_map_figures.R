@@ -75,7 +75,7 @@ out.dir <- "/home/maialen/Documents/borrar/"
   # m = max value
   # s = cut value frequency
   # ct = Brewer color code (see 'RColorBrewer::display.brewer.all()')
-if (AtlasIndex != "pr") {  # case of precipitation
+if (AtlasIndex != "meanpr") {  # case of precipitation
   m <- 8
   n <- 0
   s <- 0.5
@@ -86,7 +86,7 @@ if (AtlasIndex != "pr") {  # case of precipitation
   n <- -50
   s <- 5
   ct <- "BrBG"
-  revc <- TRUE
+  revc <- FALSE
 }
 
 ## COMPUTE DELTAS --------------------------------------------------------------
@@ -149,7 +149,7 @@ ssp <- redim(ssp, drop = TRUE); ssp <- redim(ssp)
 # NOTE: Relative deltas are calculated in the case of precipitation (i.e.: future / historical, in %)
 
 delta <- gridArithmetics(climatology(ssp), climatology(hist), operator = "-")
-rel.delta <- gridArithmetics(aggregateGrid(ssp, aggr.mem = list(FUN = mean, na.rm = T)), 
+rel.delta <- gridArithmetics(aggregateGrid(delta, aggr.mem = list(FUN = mean, na.rm = T)), 
                              aggregateGrid(climatology(hist), aggr.mem = list(FUN = mean, na.rm = T)), 
                              100, 
                              operator = c("/", "*"))
@@ -160,8 +160,8 @@ rel.delta <- gridArithmetics(aggregateGrid(ssp, aggr.mem = list(FUN = mean, na.r
 
 attr(delta$xyCoords, "projection") <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 attr(rel.delta$xyCoords, "projection") <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
-delta.rob <- warpGrid(delta, new.CRS = "+proj=robin +lon_0=150 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
-rel.delta.rob <- warpGrid(rel.delta, new.CRS = "+proj=robin +lon_0=150 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
+delta.rob <- warpGrid(delta, new.CRS = "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
+rel.delta.rob <- warpGrid(rel.delta, new.CRS = "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
 
 # The intermediate object can be optionally stored as a R data object:
 # save(delta, file = paste0(out.dir, "delta_", AtlasIndex, "_", scenario, "_",  paste(season, collapse = "-"),".rda"))
@@ -169,7 +169,8 @@ rel.delta.rob <- warpGrid(rel.delta, new.CRS = "+proj=robin +lon_0=150 +x_0=0 +y
 
 # CALCULATE UNCERTAINTY AND PRODUCE HATCHING ---------------------------------------------------
 
-# Next uncertainty is calculated. The outputs are binary C4R grids (0 = uncertain, 1 = certain)
+# Next uncertainty is calculated (check "../datasets-interactive-atlas/hatching-functions/hatching-functions.R"
+# for further details on the uncertainty calculation). The outputs are binary C4R grids (0 = uncertain, 1 = certain)
 # run e.g. spatialPlot(uncer2) to check the uncertainty areas.
 
 # (1) signal
@@ -184,28 +185,31 @@ uncer2 <- aggregateGrid(delta, aggr.mem = list(FUN = agreement, th = 80))
 
 attr(uncer1$xyCoords, "projection") <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 attr(uncer2$xyCoords, "projection") <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
-uncer1 <- warpGrid(uncer1, new.CRS = "+proj=robin +lon_0=150 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
-uncer2 <- warpGrid(uncer2, new.CRS = "+proj=robin +lon_0=150 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
+uncer1.rob <- warpGrid(uncer1, new.CRS = "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
+uncer2.rob <- warpGrid(uncer2, new.CRS = "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
 
-uncer1.hatch <- map.hatching(clim = climatology(uncer1), threshold = "0.5", angle = "-45",
-                             condition = "LT", density = 4,  lwd = 0.8,
+# Hatches are created. The outputs are a list containing a SpatialLines object (form package sp)
+# together with other graphical parameters. This list is later passed to the plotting function. 
+
+uncer1.hatch <- map.hatching(clim = climatology(uncer1.rob), threshold = "0.5", angle = "45",
+                             condition = "LT", density = 4,  lwd = 0.6,
                              upscaling.aggr.fun = list(FUN = mean))
-uncer2.hatch <- map.hatching(clim = climatology(uncer2), threshold = "0.5", angle = "-45",
-                             condition = "LT", density = 4,  lwd = 0.8,
+uncer2.hatch <- map.hatching(clim = climatology(uncer2.rob), threshold = "0.5", angle = "-45",
+                             condition = "LT", density = 4,  lwd = 0.6,
                              upscaling.aggr.fun = list(FUN = mean))
 
 # LOAD AND PROJECT ADDITIONAL MAP LINES ---------------------------------------
 coast <- readOGR(coast.dir)
-coast.rob <- spTransform(coast, CRSobj = CRS("+proj=robin +lon_0=150 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"))
+coast.rob <- spTransform(coast, CRSobj = CRS("+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"))
 
 regions <- readOGR(regions.dir)
-regions.rob <- spTransform(regions, CRSobj = CRS("+proj=robin +lon_0=150 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"))
+regions.rob <- spTransform(regions, CRSobj = CRS("+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"))
 
 # PLOT MAP --------------------------------------------------------------------
 
 # Calculate the ensemble mean (of the absolute or relative delta)
-out <- aggregateGrid(delta.rob, aggr.mem = list(FUN = mean))
-#out <- aggregateGrid(rel.delta.rob, aggr.mem = list(FUN = mean))
+out <- aggregateGrid(rel.delta.rob, aggr.mem = list(FUN = mean))
+#out <- aggregateGrid(delta.rob, aggr.mem = list(FUN = mean))
 
 pl <- spatialPlot(out, 
             color.theme = ct, 
@@ -214,13 +218,13 @@ pl <- spatialPlot(out,
             set.max = m, set.min = n,
             main = list(paste0(AtlasIndex, " mean delta change"), cex = 0.8),
             xlab = list(paste0("Period: ", paste(range(future.period), collapse = "-"), ", Season: ", paste(month.abb[season], collapse = "-")), cex = 0.8),
-            sp.layout = list(uncer1.hatch, uncer2.hatch, list(coast.rob, col = "purple4", first = FALSE), list(coast.rob, col = "black", first = FALSE)),
+            sp.layout = list(uncer1.hatch, uncer2.hatch, list(coast.rob, col = "purple4", first = FALSE), list(regions.rob, col = "black", first = FALSE)),
             par.settings = list(axis.line = list(col = 'transparent')))
 
 pl
 
 # Export the figure as PDF file
-pdf(paste0(out.dir, "/Delta_", AtlasIndex, "_", scenario, "_",  paste(season, collapse = "-"),".pdf"), width = 10, height = 10)
-print(pl)
+pdf(paste0(out.dir, "/Delta_", AtlasIndex, "_", scenario, "_",  paste(range(future.period), collapse = "-"), "_", paste(month.abb[season], collapse = "-"),".pdf"), width = 10, height = 10)
+pl
 dev.off()
 
