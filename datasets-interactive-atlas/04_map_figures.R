@@ -99,18 +99,30 @@ membernames <- ssp.members[ssp.m.ind]
 ## Data loading and aggregation
 # For convenience, the auxiliary wrapper 'aux.fun' is next defined, performing the following actions in one single step:
 #  1. Performs data subsetting along the member dimension to extract the common members defined in the previous step
-#  2. Computes the climatology of the annualy aggregated data. This is the temporal mean for the whole target period
-
+#  2. Computes the climatology, this is the temporal mean for the whole target period.
 aux.fun <- function(grid, members) {
   climatology(
     subsetGrid(grid, members = members), clim.fun = list(FUN = mean, na.rm = TRUE)
-    )
+  )
 }
 
-## Historical experiment data are loaded sequentially according to the chunking definition
+## A bit more complex auxiliary wrapper is aux.fun.signal, used for the historical data used for computing the signal.
+#  1. Performs data subsetting along the member dimension to extract the common members defined in the previous step
+#  2. Agregate the data annualy.
+#  3. Computes the climatology of the annualy aggregated data by applying the hist.sigma function. 
+aux.fun.signal <- function(grid, members) {
+  climatology(
+    aggregateGrid(
+      subsetGrid(grid, members = members), aggr.y = list(FUN = mean, na.rm = TRUE)
+    ), 
+    clim.fun = list(FUN = hist.sigma)
+  )
+}
 
+
+## Historical experiment data are loaded sequentially according to the chunking definition and applying the wrapper functions defined above.
 hist.s <- climate4R.chunk(n.chunks = n.chunks,
-                              C4R.FUN.args = list(FUN = "aux.fun",
+                              C4R.FUN.args = list(FUN = "aux.fun.signal",
                                                   grid = list(dataset = dataset.hist, var = AtlasIndex),
                                                   members = hist.m.ind),
                               loadGridData.args = list(years = signal.period, season = season))
@@ -125,7 +137,7 @@ hist <- climate4R.chunk(n.chunks = n.chunks,
 hist.s <- redim(hist.s, drop = TRUE); hist.s <- redim(hist.s)
 hist <- redim(hist, drop = TRUE); hist <- redim(hist)
 
-## RCP/SSP experiment future data are loaded sequentially according to the chunking definition:
+## RCP/SSP experiment future data are loaded sequentially according to the chunking definition and applying the wrapper function defined above.
 
 ssp <- climate4R.chunk(n.chunks = n.chunks,
                         C4R.FUN.args = list(FUN = "aux.fun",
@@ -200,8 +212,8 @@ regions.rob <- spTransform(regions, CRSobj = CRS("+proj=robin +lon_0=0 +x_0=0 +y
 
 # PLOT MAP --------------------------------------------------------------------
 
-# Calculate the ensemble mean (of the absolute or relative delta)
-out <- aggregateGrid(rel.delta.rob, aggr.mem = list(FUN = mean))
+# Calculate the ensemble mean (or use the relative delta)
+out <- rel.delta.rob
 #out <- aggregateGrid(delta.rob, aggr.mem = list(FUN = mean))
 
 pl <- spatialPlot(out, 
