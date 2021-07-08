@@ -22,18 +22,14 @@
 
 # Climate4R package for data loading
 library(loadeR)
-
 # Climate4R package for data visualization
 # <https://doi.org/10.1016/j.envsoft.2017.09.008>
 library(visualizeR)
-
 # climate 4R package for geoprocessing
 library(geoprocessoR)
-
 # Other utilities for spatial data handling and geoprocessing:
 library(sp)
 library(rgdal)
-
 # Dev utilities used for source_url
 library(devtools)
 # Load function for latitudinal chunking 
@@ -60,15 +56,12 @@ future.period <- 2041:2060
 # Path of the shapefile of World coastlines and referece regions, e.g. 
 ## downloable from https://github.com/IPCC-WG1/Atlas/tree/devel/notebooks/auxiliary-material
 coast.dir <- "auxiliary-material/WORLD_coastline.shp"
+## downloable from https://github.com/IPCC-WG1/Atlas/tree/devel/reference-regions
 regions.dir <- "../reference-regions/IPCC-WGI-reference-regions-v4.geojson"
 # Source directory where the NcMLs (those created by script3_ensemble_building.R) are located
 source.dir <- ""
-#!!!
-source.dir <- paste0("/oceano/gmeteo/WORK/PROYECTOS/2018_IPCC/data/", project, "/", AtlasIndex, "/ncml/")
 # Output directory to save the .rda object of the computed deltas and to export the pdf of the figure
 out.dir <- ""
-#!!!
-out.dir <- "/home/maialen/Documents/borrar/"
 
 # Color key graphical parameter:
   # n = min value
@@ -89,7 +82,7 @@ if (AtlasIndex != "meanpr") {  # case of precipitation
   revc <- FALSE
 }
 
-## COMPUTE DELTAS --------------------------------------------------------------
+## LOAD DATA --------------------------------------------------------------
 
 
 dataset.hist <- list.files(source.dir, pattern = paste0("historical_", AtlasIndex, ".ncml"), full.names = TRUE)
