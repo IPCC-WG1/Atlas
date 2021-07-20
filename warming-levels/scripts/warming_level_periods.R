@@ -41,18 +41,6 @@ allfiles <- sprintf("%s/%s", datadir, filelist)
 aux <- grep("historical", filelist, value = TRUE)
 modelruns <- gsub(sprintf("%s_|_historical|\\.csv", cmip), "", aux)
 
-#
-# Compute annual averages
-#
-world.annual.mean <- function(csvfile){
-    csvdata <- read.table(csvfile, header = TRUE, sep = ",")
-    rval <- subset(csvdata, select = "world", drop = TRUE)
-    yrs <- subset(csvdata, select = "date", drop = TRUE) %>%
-        gsub("-.*", "", .) %>% as.integer()
-    rval <- tapply(rval, INDEX = yrs, FUN = "mean", na.rm = TRUE)
-    names(rval) <- unique(yrs)
-    return(rval)
-}
 
 #
 # Main loop
