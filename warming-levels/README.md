@@ -6,6 +6,10 @@ The approach is similar to that described by e.g. [Nikulin *et al.* (2018)](http
 
 The use of a 20-year moving window is selected to be consistent with 20-year time slices typically used for future projections: the near-term (2021-2040), mid-term (2041-2060) and long-term (2081-2100). However, figures in [CMIP5_WarmingLevels_spread_scenario.pdf](CMIP5_WarmingLevels_spread_scenario.pdf) compare the results for 20- and 30-year windows using the large CMIP5 ensemble. 
 
+<p align="center">
+  <img src="CMIP6_GWL_2degC_SSP370.png" alt="" width="" />
+</p>
+
 ## Similar repositories
 
 A similar repository for GWL calculation is maintained by [Mathias Hauser](https://github.com/mathause/cmip_warming_levels) and provides similar information which allows double-checking the results. Small differences (1-year shifts) are attributable to different postprocessing methods and/or different members/versions.
