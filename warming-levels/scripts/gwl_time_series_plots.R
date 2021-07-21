@@ -23,7 +23,7 @@ library(RColorBrewer)
 source("warming-levels/scripts/getGWL.R")
 
 #
-# Parameter settings
+# Parameter settings (current values reproduce Fig. in the README file)
 #
 
 cmip <- "CMIP6"
@@ -123,7 +123,7 @@ ylim <- c(ylims[1] - .5, ylims[2] + .5)
 
 
 # Choosing random distinct colors for each ensemble member
-# NOTE: color palette may not be fully reproducible due to random color selection in this step
+# NOTE: color palette may not be fully reproducible due to the random color selection in this step
 # https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-distinctive-colors-in-r
 
 n <- ncol(filtered.mat)
