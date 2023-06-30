@@ -43,12 +43,12 @@ The total CO2 anthropogenic emissions data is derived from the input4MIPs datase
 
 The decadal gridded data was provided by the input4MIPs project ([Feng et al. (2020)](https://doi.org/10.5194/gmd-13-461-2020)). Source: [ESGF](https://esgf-node.llnl.gov/search/input4mips/). 
 
-<u>Historical anthropogenic emissions</u> [https://doi.org/10.22033/ESGF/input4MIPs.1241](https://doi.org/10.22033/ESGF/input4MIPs.1241) (Hoesly et al. (2017a, b):
+<ins>Historical anthropogenic emissions</ins> [https://doi.org/10.22033/ESGF/input4MIPs.1241](https://doi.org/10.22033/ESGF/input4MIPs.1241) (Hoesly et al. (2017a, b):
 
 CO2-em-anthro_input4MIPs_emissions_CMIP_CEDS-2017-05-18\
 CO2-em-AIR-anthro_input4MIPs_emissions_CMIP_CEDS-2017-08-30
 
-<u>Future emissions downscaling and gridding</u> [https://doi.org/10.22033/ESGF/input4MIPs.10464](https://doi.org/10.22033/ESGF/input4MIPs.10464) (Gidden et al., 2018b, c):
+<ins>Future emissions downscaling and gridding</ins> [https://doi.org/10.22033/ESGF/input4MIPs.10464](https://doi.org/10.22033/ESGF/input4MIPs.10464) (Gidden et al., 2018b, c):
 
 [anthro/AIR-anthro]_input4MIPs_emissions_ScenarioMIP_IAMC-REMIND-MAGPIE-ssp585\
 [anthro/AIR-anthro]_input4MIPs_emissions_ScenarioMIP_IAMC-MESSAGE-GLOBIOM-ssp245\
