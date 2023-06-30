@@ -9,24 +9,24 @@ Some of the notebooks require access to large data volumes out of this repositor
 Most of the notebooks are in R and some in Python:
 
 Notebook | R | py
-------------------------    |----------------------------------------------------------|---
-bias-adjustment             | [X](./bias-adjustment_R.ipynb)                           |
-CORDEX-overlaps             |                                                          | [X](./CORDEX-overlaps_Python.ipynb)
-GeoTIFF-post-processing     | [X](./GeoTIFF-post-processing_R.ipynb)                   |
-global-warming-levels       | [X](./global-warming-levels_R.ipynb)                     |
-GWL-plot                    |                                                          | [X](./GWL-plot_Python.ipynb)
-hatching-uncertainty        | [X](./hatching-uncertainty_R.ipynb)                      |
-linear-trends               | [X](./linear-trends_R.ipynb)                             |
-reference-grids             | [X](./reference-grids_R.ipynb)                           | 
-reference-regions           | [X](./reference-regions_R.ipynb)                         | [X](./reference-regions_Python.ipynb) 
-regional-scatter-plots      | [X](./regional-scatter-plots_R.ipynb)                    |
-regional-scatter-plots      | [X](./regional-scatter-plots_Figure-Atlas-13_R.ipynb)    |
-regional-scatter-plots      | [X](./regional-scatter-plots_Figure-Atlas-16_R.ipynb)    |
-regional-scatter-plots      | [X](./regional-scatter-plots_Figure-Atlas-17_R.ipynb)    |
-regional-scatter-plots      | [X](./regional-scatter-plots_Figure-Atlas-21_R.ipynb)    |
-regional-scatter-plots      | [X](./regional-scatter-plots_Figure-Atlas-22_R.ipynb)    |
-regional-scatter-plots      | [X](./regional-scatter-plots_Figure-Atlas-24_R.ipynb)    |
-regional-scatter-plots      | [X](./regional-scatter-plots_Figure-Atlas-26_R.ipynb)    |
-regional-scatter-plots      | [X](./regional-scatter-plots_Figure-Atlas-29_R.ipynb)    |
-stripes-plots               | [X](./stripes-plots_R.ipynb)                             |
+--------------------------------------------|----------------------------------------------------------|---
+bias-adjustment                             | [X](./bias-adjustment_R.ipynb)                           |
+CORDEX-overlaps                             |                                                          | [X](./CORDEX-overlaps_Python.ipynb)
+GeoTIFF-post-processing                     | [X](./GeoTIFF-post-processing_R.ipynb)                   |
+global-warming-levels                       | [X](./global-warming-levels_R.ipynb)                     |
+GWL-plot                                    |                                                          | [X](./GWL-plot_Python.ipynb)
+hatching-uncertainty                        | [X](./hatching-uncertainty_R.ipynb)                      |
+linear-trends                               | [X](./linear-trends_R.ipynb)                             |
+reference-grids                             | [X](./reference-grids_R.ipynb)                           | 
+reference-regions                           | [X](./reference-regions_R.ipynb)                         | [X](./reference-regions_Python.ipynb) 
+regional-scatter-plots                      | [X](./regional-scatter-plots_R.ipynb)                    |
+regional-scatter-plots_Figure-Atlas-13      | [X](./regional-scatter-plots_Figure-Atlas-13_R.ipynb)    |
+regional-scatter-plots_Figure-Atlas-16      | [X](./regional-scatter-plots_Figure-Atlas-16_R.ipynb)    |
+regional-scatter-plots_Figure-Atlas-17      | [X](./regional-scatter-plots_Figure-Atlas-17_R.ipynb)    |
+regional-scatter-plots_Figure-Atlas-21      | [X](./regional-scatter-plots_Figure-Atlas-21_R.ipynb)    |
+regional-scatter-plots_Figure-Atlas-22      | [X](./regional-scatter-plots_Figure-Atlas-22_R.ipynb)    |
+regional-scatter-plots_Figure-Atlas-24      | [X](./regional-scatter-plots_Figure-Atlas-24_R.ipynb)    |
+regional-scatter-plots_Figure-Atlas-26      | [X](./regional-scatter-plots_Figure-Atlas-26_R.ipynb)    |
+regional-scatter-plots_Figure-Atlas-29      | [X](./regional-scatter-plots_Figure-Atlas-29_R.ipynb)    |
+stripes-plots                               | [X](./stripes-plots_R.ipynb)                             |
 
