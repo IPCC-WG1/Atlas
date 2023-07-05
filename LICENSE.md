@@ -4,7 +4,9 @@
 
 All datasets and notebooks in this repository are provided under the [Creative Commons Attribution 4.0 license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode). Code are licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0), unless otherwise explicitly stated. Please ensure that you cite the  following reference when using these resources:
 
-Iturbide, M., Fernández, J., Gutiérrez, J.M. et al. Implementation of FAIR principles in the IPCC: the WGI AR6 Atlas repository. Scientific Data 9, 629 (2022). https://doi.org/10.1038/s41597-022-01739-y 
+> Iturbide, M., Fernández, J., Gutiérrez, J.M. et al. Implementation of FAIR principles in the IPCC: the WGI AR6 Atlas repository. Scientific Data 9, 629 (2022). https://doi.org/10.1038/s41597-022-01739-y
+
+> Intergovernmental Panel on Climate Change. (2023). Atlas. In Climate Change 2021 – The Physical Science Basis: Working Group I Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change (pp. 1927-2058). Cambridge: Cambridge University Press. https://doi.org/10.1017/9781009157896.021. Interactive Atlas available from http://interactive-atlas.ipcc.ch
 
 ### Regionally aggregated datasets
 
