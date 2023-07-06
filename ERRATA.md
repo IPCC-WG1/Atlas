@@ -2,20 +2,14 @@
 
 # Errata and problem reporting
 
-The *errata* of the Atlas covers both the content (products, such as plots and data) and the application/platform of the [Interactive Atlas](http://interactive-atlas.ipcc.ch), as well as this GitHub repository supporting reproducibility and reusability. The existing products are frozen and the issues reported are documented in the [errata list](https://github.com/IPCC-WG1/Atlas/issues?q=label%3Aerrata). Technical problems are listed separately in the [technical issues](https://github.com/IPCC-WG1/Atlas/issues?q=label%3Aproblem) and those not affecting the products could be fixed and documented. 
+Problem reporting is done through the GitHub issue tracking system and covers both this GitHub repository and the [Interactive Atlas](http://interactive-atlas.ipcc.ch), with a special tag ("IA") indicating the issues corresponding to the latter. All reported issues are managed by the Atlas support team and classified and labeled as *errata, problem, suggestion, question*, including relevant comments and actions taken (if any). The *errata* label is assigned only to issues found to affect the published IPCC report (e.g. Atlas figures and Interactive Atlas maps and graphics) which will also be reported by the team to the IPCC following the official [IPCC errata notification procedure](https://www.ipcc.ch/report/ar6/wg1/#errata). 
 
-To report an issue with the products (plots and data), please:
- 1. Make sure that the problem has not been reported yet. Check [here](https://github.com/IPCC-WG1/Atlas/issues?q=label%3Aerrata).
- 2. Follow [this GitHub issue template](https://github.com/IPCC-WG1/Atlas/issues/new?labels=errata&template=problem-report.md).
+To report any problem, technical issue, or suggestion regarding the **Interactive Atlas** please:
+ 1. Make sure that the issue has not been covered yet. Check [here](https://github.com/IPCC-WG1/Atlas/issues?q=label%3AIA).
+ 2. Fill in [this issue template](https://github.com/IPCC-WG1/Atlas/issues/new?labels=IA&template=interactive-atlas-report.md).
 
-To report a technical problem, please:
- 1. Make sure that the problem has not been reported yet. Check [here](https://github.com/IPCC-WG1/Atlas/issues?q=label%3Aproblem).
- 2. Follow [this GitHub issue template](https://github.com/IPCC-WG1/Atlas/issues/new?labels=problem&template=problem-report.md).
+To report an issue with this **Atlas GitHub repository** please:
+ 1. Make sure that the issue has not been covered yet. Check [here](https://github.com/IPCC-WG1/Atlas/issues?q=-label%3AIA+-label%3Areview).
+ 2. Open a [blank issue](https://github.com/IPCC-WG1/Atlas/issues/new).
 
-
-This repository supporting AR6 WGI is frozen, and does not accept any further contribution. The development continues in the [SantanderMetGroup ATLAS repository](https://github.com/SantanderMetGroup/ATLAS), where we welcome your input (note that this is no longer an official IPCC product/activity):
-
- - Discussing the current state of the repo
- - Submitting a fix
- - Providing notebooks/scripts in alternative programming languages
- - Proposing new notebooks/scripts exploiting the data
+**Disclaimer:** To formally notify an errata to the IPCC, users should follow the [IPCC errata notification procedure](https://www.ipcc.ch/report/ar6/wg1/#errata). 
