@@ -2,7 +2,9 @@
 
 The Interactive Atlas Dataset comprises gridded information from a set of [25 variables and impact-relevant indices](https://interactive-atlas.ipcc.ch/regional-information/about#variables) used in the [Interactive Atlas](http://interactive-atlas.ipcc.ch), computed from CMIP5/6 and CORDEX data (historical and scenario simulations) with monthly temporal resolution and interpolated to common [reference grids](/reference-grids) (including postprocessing –e.g. bias adjustment– when needed).
 
-The resulting dataset is being archived by [IPCC-DDC](https://www.ipcc-data.org) as part of the available data for the AR6 (estimated publication date: May 2022). The metadata and scripts for reproducibily are included in this repository. A subset with information spatially aggregated over the IPCC [reference regions](/reference-regions) is avaialable in the section [datasets-aggregated-regionally](/datasets-aggregated-regionally) of this repository and is used to reproduce some of the figures of the Atlas chapter (see [notebooks](/notebooks) section). 
+The resulting dataset is long-term archived by the [IPCC-DDC](https://www.ipcc-data.org) in [DIGITAL.CSIC](https://digital.csic.es/handle/10261/280324) as part of the available data for the AR6. It can also be accessed in a user-friendly manner by pointing to the copy of the dataset available on the [Copernicus Data Store](https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-climate-atlas?tab=overview).
+
+The metadata and scripts for reproducibily are included in this repository. A subset with information spatially aggregated over the IPCC [reference regions](/reference-regions) is avaialable in the section [datasets-aggregated-regionally](/datasets-aggregated-regionally) of this repository and is used to reproduce some of the figures of the Atlas chapter (see [notebooks](/notebooks) section). 
 
 
 ## Code for reproducibility of the Interactive Atlas Dataset
