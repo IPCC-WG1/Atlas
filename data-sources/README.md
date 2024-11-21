@@ -4,6 +4,10 @@ The [Atlas chapter](https://www.ipcc.ch/report/ar6/wg1/chapter/atlas) and the [I
 
 > We acknowledge all institutions and modelling centres for making the data publicly available in the [LICENSE](../LICENSE.md) file of this repository. 
 
+The different data sources described below have undergone a common harmonization process (common grids, units, …) to derive the final monthly gridded dataset that underpins the Atlas chapter and the Interactive Atlas products. This final dataset is preserved in the long term and is openly accessible from the IPCC Data Distribution Center ([IPCC-DDC catalog entry](https://ipcc-browser.ipcc-data.org/browser/dataset/6171/0)) in the DIGITAL.CSIC [repository](https://digital.csic.es/handle/10261/280324). A replica of the data is accessible through the Climate Data Store (CDS) of the CopernicusClimate Change Service (C3S), allowing interactive downloads using the CDS web interface or programmatic access via the CDS API service: “[Gridded monthly climate projection dataset underpinning the IPCC AR6 Interactive Atlas](https://doi.org/10.24381/cds.5292a2b0)”. Additional details can be found in the [datasets-interactive-atlas](/datasets-interactive-atlas) section of this repository.
+
+A regionally aggregated dataset containing monthly precipitation and near surface temperature spatially averaged over the IPCC-WGI reference regions (v4) is directly available from this repository ([datasets-aggregated-regionally](/datasets-aggregated-regionally)). 
+
 ## Observations
 
 The observational datasets used in the Atlas are described in [Table Atlas.SM.15](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Atlas_SM.pdf). This repository contains information derived from [W5E5](https://doi.org/10.5880/pik.2019.023) (WFDE5 over land merged with ERA5 over the ocean) dataset.
