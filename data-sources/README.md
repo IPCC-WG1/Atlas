@@ -33,7 +33,7 @@ The paleoclimate simulations used in the [Interactive Atlas](http://interactive-
 
 Sea level rise information used in the [Interactive Atlas](http://interactive-atlas.ipcc.ch) was obtained from [Chapter 9](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-9/). The sea level projections associated with the [Intergovernmental Panel on Climate Change Sixth Assessment Report](https://doi.org/10.26050/WDCC/AR6.IPCC-DDC_AR6_Sup_SLP) are preserved in [Gregory et al. 2023](https://www.wdc-climate.de/ui/entry?acronym=IPCC-DDC_AR6_Sup_SLPr). This data is also available via [the NASA Sea Level Projection Tool](https://sealevel.nasa.gov/ipcc-ar6-sea-level-projection-tool), where it can be explored in greater detail. See [IPCC AR6 Sea Level Projections | Zenodo](https://zenodo.org/communities/ipcc-ar6-sea-level-projections) for additional related datasets.
 
-## Short-lived climate forcers (AR6 WGI Chapter 5)
+## Short-lived climate forcers (AR6 WGI Chapter 6)
 
 Information on surface Ozone, Particulate Matter (PM2.5), and Effective Radiative Forcing (ERF, due to aerosols) used in the [Interactive Atlas](http://interactive-atlas.ipcc.ch) was obtained from [Chapter 6](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-6/). This data is not included in this repository.
 
