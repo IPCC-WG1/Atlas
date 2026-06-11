@@ -35,7 +35,7 @@ Sea level rise information used in the [Interactive Atlas](http://interactive-at
 
 ## Short-lived climate forcers (AR6 WGI Chapter 5)
 
-Information on surface Ozone, Particulate Matter (PM2.5), and Effective Radiative Forcing (ERF, due to aerosols) used in the [Interactive Atlas](http://interactive-atlas.ipcc.ch) was obtained from [Chapter 5](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-5/). This data is not included in this repository.
+Information on surface Ozone, Particulate Matter (PM2.5), and Effective Radiative Forcing (ERF, due to aerosols) used in the [Interactive Atlas](http://interactive-atlas.ipcc.ch) was obtained from [Chapter 6](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-6/). This data is not included in this repository.
 
 ## Socio-economic data (population and anthropogenic CO2 emissions)
 
